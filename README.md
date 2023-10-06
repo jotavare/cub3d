@@ -6,6 +6,7 @@
 - https://www.youtube.com/watch?v=nKcfhI1B4mA
 - make inside the minilibx folder
 - cc main.c -Lminilibx-linux -lmlx_Linux -lX11 -lXext
+- https://www.youtube.com/watch?v=iz958I8Xb2g&t=9s
 
 ```
 gcc program.c -Lminilibx-linux -lmlx_Linux -o process -lX11 -lXext
