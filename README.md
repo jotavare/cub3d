@@ -5,3 +5,11 @@
 - [https://www.x.org/releases/X11R7.6/doc/libX11/specs/libX11/libX11.html](https://www.x.org/releases/X11R7.6/doc/libX11/specs/libX11/libX11.html)
 - https://www.youtube.com/watch?v=nKcfhI1B4mA
 - cc main.c -Lminilibx-linux -lmlx_Linux -lX11 -lXext
+´´´
+gcc program.c -Lminilibx-linux -lmlx_Linux -o process -lX11 -lXext
+
+Do make into the minilibx
+
+minilibx-linux-> Path with the lib
+mlx_Linux-> Name of the archive file (libmlx_Linux.a)
+´´
