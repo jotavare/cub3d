@@ -4,3 +4,4 @@
 - [x.org](https://www.x.org/wiki/)
 - [https://www.x.org/releases/X11R7.6/doc/libX11/specs/libX11/libX11.html](https://www.x.org/releases/X11R7.6/doc/libX11/specs/libX11/libX11.html)
 - https://www.youtube.com/watch?v=nKcfhI1B4mA
+- cc main.c -Lminilibx-linux -lmlx_Linux -lX11 -lXext
