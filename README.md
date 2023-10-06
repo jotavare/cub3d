@@ -12,4 +12,4 @@ Do make into the minilibx
 
 minilibx-linux-> Path with the lib
 mlx_Linux-> Name of the archive file (libmlx_Linux.a)
-´´
+´´´
