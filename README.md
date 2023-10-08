@@ -7,7 +7,6 @@
 - make inside the minilibx folder
 - cc main.c -Lminilibx-linux -lmlx_Linux -lX11 -lXext
 - https://www.youtube.com/watch?v=iz958I8Xb2g&t=9s
-- https://github.com/terry-yes/mlx_example
 
 ```
 gcc program.c -Lminilibx-linux -lmlx_Linux -o process -lX11 -lXext
