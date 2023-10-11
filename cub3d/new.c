@@ -210,7 +210,6 @@ void draw_frame()
     }
 }
 
-
 // calculate the game fps and print it on the window
 void    calculate_fps()
 {
@@ -291,6 +290,16 @@ int update_player_position(int key_pressed)
     // print on the window the keycode pressed
     mlx_string_put(vars.mlx, vars.win, 10, 50, 0x00FF0000, "keycode");
     mlx_string_put(vars.mlx, vars.win, 70, 50, 0x00FF0000, ft_itoa(key_pressed));
+
+    // print on the window the ray direction
+    mlx_string_put(vars.mlx, vars.win, 10, 90, 0x00FF0000, "rayDirX");
+    mlx_string_put(vars.mlx, vars.win, 70, 90, 0x00FF0000, ft_itoa(player.dirX));
+    printf("rayDirX: %f\n", ft_itoa(player.dirX));
+    mlx_string_put(vars.mlx, vars.win, 10, 110, 0x00FF0000, "rayDirY");
+    mlx_string_put(vars.mlx, vars.win, 70, 110, 0x00FF0000, ft_itoa(player.dirY));
+
+    
+
     calculate_fps();
 	return (0);
 }
