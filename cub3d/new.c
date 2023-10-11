@@ -1,16 +1,12 @@
-#include "mlx/mlx.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <unistd.h>
+#include "mlx/mlx.h"
+#include <time.h>
 
-/*
-g++ *.cpp -lSDL -O3 -W -Wall -ansi -pedantic
-g++ *.cpp -lSDL
-*/
-
-//place the example code below here:
+//place the example code below here:s
 
 #define screenWidth 640
 #define screenHeight 480
@@ -41,6 +37,63 @@ t_player player;
 t_vars vars;
 t_map map;
 
+//ft_strdup
+char	*ft_strdup(const char *s1)
+{
+    char	*str;
+    int		i;
+
+    i = 0;
+    while (s1[i])
+        i++;
+    str = (char *)malloc(sizeof(char) * (i + 1));
+    if (!str)
+        return (0);
+    i = 0;
+    while (s1[i])
+    {
+        str[i] = s1[i];
+        i++;
+    }
+    str[i] = '\0';
+    return (str);
+}
+
+//ft_itoa
+char	*ft_itoa(int n)
+{
+    char	*str;
+    int		len;
+    long	nbr;
+
+    nbr = n;
+    len = 0;
+    if (nbr == 0)
+        return (ft_strdup("0"));
+    if (nbr < 0)
+    {
+        nbr = -nbr;
+        len++;
+    }
+    while (n != 0)
+    {
+        n = n / 10;
+        len++;
+    }
+    str = (char *)malloc(sizeof(char) * (len + 1));
+    if (!str)
+        return (0);
+    str[len] = '\0';
+    while (nbr != 0)
+    {
+        str[--len] = nbr % 10 + '0';
+        nbr = nbr / 10;
+    }
+    if (len == 1)
+        str[0] = '-';
+    return (str);
+}
+
 void draw_line(int x, int drawStart, int drawEnd, int color)
 {
     for (int y = drawStart; y <= drawEnd; y++)
@@ -49,7 +102,9 @@ void draw_line(int x, int drawStart, int drawEnd, int color)
 
 void draw_frame()
 {
-    for (int x = 0; x < screenWidth; x++)
+    int x = 0;
+
+    while (x < screenWidth)
     {
         double cameraX = 2 * x / (double)screenWidth - 1;
         double rayDirX = player.dirX + player.planeX * cameraX;
@@ -61,8 +116,18 @@ void draw_frame()
         double sideDistX;
         double sideDistY;
 
-        double deltaDistX = (rayDirX == 0) ? 1e30 : fabs(1 / rayDirX);
-        double deltaDistY = (rayDirY == 0) ? 1e30 : fabs(1 / rayDirY);
+        double deltaDistX;
+        double deltaDistY;
+
+        if (rayDirX == 0)
+            deltaDistX = 1e30;
+        else
+            deltaDistX = fabs(1 / rayDirX);
+
+        if (rayDirY == 0)
+            deltaDistY = 1e30;
+        else
+            deltaDistY = fabs(1 / rayDirY);
 
         double perpWallDist;
 
@@ -129,44 +194,58 @@ void draw_frame()
 
         int color;
 
-        // Assign colors based on the wall type in your map.
-        switch (map.worldMap[mapX][mapY])
-        {
-            case 1:  color = 0xFF0000; break; // Red
-            case 2:  color = 0x00FF00; break; // Green
-            case 3:  color = 0x0000FF; break; // Blue
-            case 4:  color = 0xFFFFFF; break; // White
-            default: color = 0xFFFF00; break; // Yellow
+        int colors[] = {0xFFFF00, 0xFF0000, 0x00FF00, 0x0000FF, 0xFFFFFF};
+        int mapValue = map.worldMap[mapX][mapY];
+        if (mapValue < 0 || mapValue > 4) {
+            mapValue = 0;
         }
+        color = colors[mapValue];
 
         if (side == 1)
             color = color / 2;
 
         draw_line(x, drawStart, drawEnd, color);
+        
+        x++;
     }
 }
 
-int key_pressed(int keycode)
+
+// calculate the game fps and print it on the window
+void    calculate_fps()
 {
-    return (keycode == 53 || keycode == 123 || keycode == 124 || keycode == 125 || keycode == 126);
+    static int  fps = 0;
+    static int  old_time = 0;
+    static char *fps_str = NULL;
+    char        *tmp;
+
+    if (fps_str == NULL)
+        fps_str = ft_itoa(fps);
+    if (fps_str == NULL)
+        return ;
+    fps++;
+    if (old_time != 0 && old_time != time(NULL))
+    {
+        tmp = ft_itoa(fps);
+        if (tmp == NULL)
+            return ;
+        free(fps_str);
+        fps_str = tmp;
+        fps = 0;
+    }
+    mlx_string_put(vars.mlx, vars.win, 10, 70, 0x00FF0000, "fps");
+    mlx_string_put(vars.mlx, vars.win, 70, 70, 0x00FF0000, fps_str);
+    old_time = time(NULL);
 }
 
-int update_player_position()
+int update_player_position(int key_pressed)
 {
-    if (key_pressed(53)) // ESC key
+    mlx_clear_window(vars.mlx, vars.win);
+    draw_frame();
+    if (key_pressed == 53) // ESC key
         exit(0);
 
-    if (key_pressed(123)) // Left arrow key
-    {
-        double oldDirX = player.dirX;
-        player.dirX = player.dirX * cos(player.rotSpeed) - player.dirY * sin(player.rotSpeed);
-        player.dirY = oldDirX * sin(player.rotSpeed) + player.dirY * cos(player.rotSpeed);
-        double oldPlaneX = player.planeX;
-        player.planeX = player.planeX * cos(player.rotSpeed) - player.planeY * sin(player.rotSpeed);
-        player.planeY = oldPlaneX * sin(player.rotSpeed) + player.planeY * cos(player.rotSpeed);
-    }
-
-    if (key_pressed(124)) // Right arrow key
+    if (key_pressed == 100) // Right arrow key
     {
         double oldDirX = player.dirX;
         player.dirX = player.dirX * cos(-player.rotSpeed) - player.dirY * sin(-player.rotSpeed);
@@ -176,7 +255,7 @@ int update_player_position()
         player.planeY = oldPlaneX * sin(-player.rotSpeed) + player.planeY * cos(-player.rotSpeed);
     }
 
-    if (key_pressed(125)) // Down arrow key
+    if (key_pressed == 115) // Down arrow key
     {
         if (map.worldMap[(int)(player.posX - player.dirX * player.moveSpeed)][(int)(player.posY)] == 0)
             player.posX -= player.dirX * player.moveSpeed;
@@ -185,7 +264,7 @@ int update_player_position()
             player.posY -= player.dirY * player.moveSpeed;
     }
 
-    if (key_pressed(126)) // Up arrow key
+    if (key_pressed == 119) // Up arrow key
     {
         if (map.worldMap[(int)(player.posX + player.dirX * player.moveSpeed)][(int)(player.posY)] == 0)
             player.posX += player.dirX * player.moveSpeed;
@@ -193,12 +272,27 @@ int update_player_position()
         if (map.worldMap[(int)(player.posX)][(int)(player.posY + player.dirY * player.moveSpeed)] == 0)
             player.posY += player.dirY * player.moveSpeed;
     }
-	return (0);
-}
+    if(key_pressed == 97) // Left arrow key
+    {
+        double oldDirX = player.dirX;
+        player.dirX = player.dirX * cos(player.rotSpeed) - player.dirY * sin(player.rotSpeed);
+        player.dirY = oldDirX * sin(player.rotSpeed) + player.dirY * cos(player.rotSpeed);
+        double oldPlaneX = player.planeX;
+        player.planeX = player.planeX * cos(player.rotSpeed) - player.planeY * sin(player.rotSpeed);
+        player.planeY = oldPlaneX * sin(player.rotSpeed) + player.planeY * cos(player.rotSpeed);
+    }
 
-int close_window()
-{
-	exit(0);
+    // print on the window the player position
+    mlx_string_put(vars.mlx, vars.win, 10, 10, 0x00FF0000, "posX");
+    mlx_string_put(vars.mlx, vars.win, 70, 10, 0x00FF0000, ft_itoa(player.posX));
+    mlx_string_put(vars.mlx, vars.win, 10, 30, 0x00FF0000, "posY");
+    mlx_string_put(vars.mlx, vars.win, 70, 30, 0x00FF0000, ft_itoa(player.posY));
+
+    // print on the window the keycode pressed
+    mlx_string_put(vars.mlx, vars.win, 10, 50, 0x00FF0000, "keycode");
+    mlx_string_put(vars.mlx, vars.win, 70, 50, 0x00FF0000, ft_itoa(key_pressed));
+    calculate_fps();
+	return (0);
 }
 
 int main(void)
@@ -209,7 +303,7 @@ int main(void)
     player.dirY = 0;
     player.planeX = 0;
     player.planeY = 0.66;
-    player.moveSpeed = 0.05;
+    player.moveSpeed = 0.20;
     player.rotSpeed = 0.05;
 
 	int customMap[mapWidth][mapHeight]=
@@ -253,9 +347,6 @@ int main(void)
     vars.win = mlx_new_window(vars.mlx, screenWidth, screenHeight, "Raycaster");
 
     mlx_hook(vars.win, 2, 1L<<0, &update_player_position, NULL);
-    mlx_hook(vars.win, 17, 1L<<17, close_window, NULL);
-
-    draw_frame();
     mlx_loop(vars.mlx);
     return (0);
 }
