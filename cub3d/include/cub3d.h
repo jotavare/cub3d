@@ -20,6 +20,7 @@
 # include <X11/keysym.h>
 # include <fcntl.h>
 # include <math.h>
+# include <stdio.h>
 
 # define WIN_W 1280
 # define WIN_H 720
@@ -27,8 +28,8 @@
 # define RES 64
 # define MINIMAP_SCALE 10
 
-# define PLAYER_SPEED 9.0
-# define PLAYER_ANGLE_SPEED 6.0
+# define PLAYER_SPEED 4.0
+# define PLAYER_ANGLE_SPEED 3.0
 # define SLIDE_DISTANCE 0.1
 
 // [PARSING]

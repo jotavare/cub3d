@@ -19,7 +19,7 @@
  */
 void	display_error(char *str)
 {
-	ft_putstr_fd("Error\n", 2);
+	printf("Error\n");
 	ft_putstr_fd(str, 2);
 	ft_putstr_fd("\n", 2);
 }
