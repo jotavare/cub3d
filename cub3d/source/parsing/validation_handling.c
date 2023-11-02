@@ -49,7 +49,7 @@ void	assign_error_code(t_parse_data *parse_data, int n)
  */
 void	display_parsing_error(int err)
 {
-	ft_putstr_fd("Ups! Something is wrong!\n", 2);
+	printf("Error\n");
 	if (err == 1)
 		ft_putstr_fd("Can't open file.\n", 2);
 	if (err == 2)

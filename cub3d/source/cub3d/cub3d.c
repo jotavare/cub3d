@@ -28,7 +28,11 @@ int	main(int argc, char **argv)
 	t_cub3d	cub3d;
 
 	if (argc != 2)
-		return (display_error("Invalid number of arguments."), 1);
+	{
+		printf("Error\n");
+		printf("Invalid number of arguments.");
+		return (0);
+	}
 	ft_bzero(&cub3d, sizeof(t_cub3d));
 	if (inicialize_mlx(&cub3d) != 0)
 		return (display_error("MLX error."), 2);

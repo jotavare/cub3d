@@ -104,11 +104,23 @@ int	valid_cub_extension(char *filename)
 {
 	int	i;
 
-	i = ft_strlen(filename);
-	if (i < 4)
+	i = 0;
+	while (filename[i] != '\0')
+		i++;
+	i--;
+	if (filename[i] != 'b')
 		return (0);
-	if (filename[i - 1] == 'b' && filename[i - 2] == 'u'
-		&& filename[i - 3] == 'c' && filename[i - 4] == '.')
+	i--;
+	if (filename[i] != 'u')
+		return (0);
+	i--;
+	if (filename[i] != 'c')
+		return (0);
+	i--;
+	if (filename[i] != '.')
+		return (0);
+	i--;
+	if (i != 0 && filename[i] != '/')
 		return (1);
 	return (0);
 }

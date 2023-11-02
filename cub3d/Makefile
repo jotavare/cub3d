@@ -6,7 +6,7 @@
 #    By: jotavare <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/02 00:45:13 by jotavare          #+#    #+#              #
-#    Updated: 2023/11/02 04:21:27 by jotavare         ###   ########.fr        #
+#    Updated: 2023/11/02 17:17:37 by psotto-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,6 @@ NAME		=	cub3d
 
 HEADERS		=	include/cub3d.h
 INCLUDE		=	-I ./include -I $(MLX_DIR) -I $(LIBFT_DIR)
-
 
 SRCS		=	source/algorithm/check_walls.c \
 				source/algorithm/initialize_player.c \
@@ -77,5 +76,10 @@ norm:
 	@printf "$(CURSIVE)$(GRAY)"
 	@norminette | grep -v OK!
 	@printf "$(RESET)"
+
+minilibx:
+	git clone git@github.com:42Paris/minilibx-linux.git
+	mv minilibx-linux extras/minilibx
+	cd extras/minilibx && ./configure
 
 .PHONY : all clean fclean re
