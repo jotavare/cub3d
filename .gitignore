@@ -1,2 +1,3 @@
 *.o
 cub3d/extras/minilibx
+cub3d/cub3d/.vscode

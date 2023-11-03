@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_map_size.c                                     :+:      :+:    :+:   */
+/*   map_dimensions.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jotavare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 00:07:28 by jotavare          #+#    #+#             */
-/*   Updated: 2023/11/02 04:05:47 by jotavare         ###   ########.fr       */
+/*   Updated: 2023/11/03 01:16:12 by jotavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../include/cub3d.h"
 
 /**
  * Checks if a character is a valid map character, which typically

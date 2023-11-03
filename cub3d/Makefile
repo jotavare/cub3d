@@ -6,7 +6,7 @@
 #    By: jotavare <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/02 00:45:13 by jotavare          #+#    #+#              #
-#    Updated: 2023/11/02 17:17:37 by psotto-m         ###   ########.fr        #
+#    Updated: 2023/11/03 00:03:06 by jotavare         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,11 +73,12 @@ fclean : clean
 re : fclean all
 
 norm:
-	@printf "$(CURSIVE)$(GRAY)"
-	@norminette | grep -v OK!
-	@printf "$(RESET)"
+	@norminette ./extras/libft/
+	@norminette -R CheckForbiddenSourceHeader ./extras/libft/libft.h
+	@norminette ./source/
+	@norminette -R CheckForbiddenSourceHeader ./include/
 
-minilibx:
+mlx:
 	git clone git@github.com:42Paris/minilibx-linux.git
 	mv minilibx-linux extras/minilibx
 	cd extras/minilibx && ./configure

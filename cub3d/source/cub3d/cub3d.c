@@ -6,11 +6,11 @@
 /*   By: jotavare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 00:08:00 by jotavare          #+#    #+#             */
-/*   Updated: 2023/11/02 03:56:12 by jotavare         ###   ########.fr       */
+/*   Updated: 2023/11/03 01:17:07 by jotavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../include/cub3d.h"
 
 /**
  * Main function of the Cub3D game.
@@ -30,7 +30,7 @@ int	main(int argc, char **argv)
 	if (argc != 2)
 	{
 		printf("Error\n");
-		printf("Invalid number of arguments.");
+		printf("Invalid number of arguments.\n");
 		return (0);
 	}
 	ft_bzero(&cub3d, sizeof(t_cub3d));
