@@ -6,11 +6,11 @@
 /*   By: jotavare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 01:49:07 by jotavare          #+#    #+#             */
-/*   Updated: 2023/11/02 01:49:08 by jotavare         ###   ########.fr       */
+/*   Updated: 2023/11/03 01:17:19 by jotavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../include/cub3d.h"
 
 /**
  * Use Pythagoras theorem to calculate the distance between

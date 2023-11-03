@@ -6,7 +6,7 @@
 /*   By: jotavare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 00:08:28 by jotavare          #+#    #+#             */
-/*   Updated: 2023/11/02 04:12:23 by jotavare         ###   ########.fr       */
+/*   Updated: 2023/11/03 01:14:54 by jotavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,58 +32,7 @@
 # define PLAYER_ANGLE_SPEED 3.0
 # define SLIDE_DISTANCE 0.1
 
-// [PARSING]
-// file_format.c
-int			valid_data_line(char *line);
-int			valid_empty_line(char *line);
-int			valid_file_format(char *file, t_parse_data *parse_data);
-int			valid_cub_extension(char *filename);
-
-// get_data.c
-int			process_data_file_line(char *file, t_parse_data *parse_data);
-int			process_color_data_split_line(char **line_split,
-				t_parse_data *parse_data);
-int			process_texture_data_split_line(char **line_split,
-				t_parse_data *parse_data);
-int			check_duplicate_line(char *line, t_parse_data *parse_data);
-int			process_parsed_data_line(char *line, t_parse_data *parse_data);
-
-// get_map_size.c
-int			valid_map_char(char c);
-int			calc_map_line_length(char *line);
-void		end_of_file(int fd);
-int			map_dimensions_file(char *file, t_parse_data *parse_data);
-
-// get_map.c
-void		populate_map_row(int *row, char *line);
-int			read_populate_map_file(char *file, t_parse_data *parse_data);
-
-// map_check.c
-int			invalid_blocks_found(t_parse_data *parse_data);
-int			verify_enclosed_space(t_parse_data *parse_data, int x, int y);
-int			check_map_holes(t_parse_data *parse_data);
-int			count_spawn_points(t_parse_data *parse_data);
-int			validate_game_map(t_parse_data *parse_data);
-
-// parse_utils.c
-int			line_data_check(char *line);
-void		assign_error_code(t_parse_data *parse_data, int n);
-void		display_parsing_error(int err);
-void		output_game_map(t_parse_data *parse_data);
-
-// parce.c
-void		free_2d_map(int **map);
-int			initialize_map(t_parse_data *parse_data);
-void		free_parsing_data(t_parse_data *parse_data);
-int			read_parse_file(char *file, t_parse_data *parse_data);
-
-// parsing_utilities.c
-int			data_missing(t_parse_data *parse_data);
-int			valid_texture_line(char *line);
-int			valid_color_line(char *line);
-int			valid_color(char **split);
-
-// [ALGORITHM]
+// [ALGORITHM] //
 // check_wall.c
 t_ray_data	*vertical_wall_check(t_cub3d *data, t_ray_data *ray_elem);
 t_ray_data	*horizontal_wall_check(t_cub3d *data, t_ray_data *ray_elem);
@@ -113,7 +62,7 @@ double		ray_angle(t_cub3d *data, int window_x);
 float		pythagoras_distance(float ax, float ay, float bx, float by);
 void		render_3d_world(t_cub3d *data);
 
-// [CUB3D]
+// [CUB3D] //
 // cub3d_utilities.c
 int			inicialize_mlx(t_cub3d *cub3d);
 float		min_float(float a, float b);
@@ -137,7 +86,56 @@ int			handle_keydown(int keysym, t_cub3d *cub3d);
 int			handle_keyup(int keysym, t_cub3d *cub3d);
 int			handle_window_kill(t_cub3d *cub3d);
 
-// [RENDERING]
+// [PARSING] //
+// file_validation.c
+int			valid_data_line(char *line);
+int			valid_empty_line(char *line);
+int			valid_file_format(char *file, t_parse_data *parse_data);
+int			valid_cub_extension(char *filename);
+
+// map_dimensions.c
+int			valid_map_char(char c);
+int			calc_map_line_length(char *line);
+int			map_dimensions_file(char *file, t_parse_data *parse_data);
+void		end_of_file(int fd);
+
+// map_inicialize.c
+int			initialize_map(t_parse_data *parse_data);
+int			read_parse_file(char *file, t_parse_data *parse_data);
+void		free_2d_map(int **map);
+void		free_parsing_data(t_parse_data *parse_data);
+
+// map_populate.c
+void		fill_map_row(int *row, char *line);
+int			read_populate_map_file(char *file, t_parse_data *parse_data);
+
+// map_validation.c
+int			invalid_blocks_found(t_parse_data *parse_data);
+int			verify_enclosed_space(t_parse_data *parse_data, int x, int y);
+int			check_map_holes(t_parse_data *parse_data);
+int			count_spawn_points(t_parse_data *parse_data);
+int			validate_game_map(t_parse_data *parse_data);
+
+// process_data.c
+int			process_data_file_line(char *file, t_parse_data *parse_data);
+int			read_color_split_line(char **line_split, t_parse_data *parse_data);
+int			read_text_split_line(char **line_split, t_parse_data *parse_data);
+int			check_duplicate_line(char *line, t_parse_data *parse_data);
+int			process_parsed_data_line(char *line, t_parse_data *parse_data);
+
+// validation_handling.c
+int			line_data_check(char *line);
+void		assign_error_code(t_parse_data *parse_data, int n);
+void		display_parsing_error(int err);
+void		output_game_map(t_parse_data *parse_data);
+
+// validation_utilities.c
+int			data_missing(t_parse_data *parse_data);
+int			valid_texture_line(char *line);
+int			valid_color_line(char *line);
+int			valid_color(char **split);
+
+// [RENDERING] //
 // 2d.c
 void		render_ceiling_floor(t_cub3d *cub3d);
 

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_data.c                                         :+:      :+:    :+:   */
+/*   process_data.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jotavare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 00:07:31 by jotavare          #+#    #+#             */
-/*   Updated: 2023/11/02 04:12:32 by jotavare         ###   ########.fr       */
+/*   Updated: 2023/11/03 01:25:08 by jotavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../include/cub3d.h"
 
 /**
  * Fill the structure with data extracted from a line, handling texture
@@ -53,7 +53,7 @@ int	process_data_file_line(char *file, t_parse_data *parse_data)
  * @param parse_data - A pointer to the structure for storing the color info.
  * @return [0] Color data is filled [1] Error in the color format/data.
  */
-int	process_color_data_split_line(char **line_split, t_parse_data *parse_data)
+int	read_color_split_line(char **line_split, t_parse_data *parse_data)
 {
 	char	**color_split;
 
@@ -89,7 +89,7 @@ int	process_color_data_split_line(char **line_split, t_parse_data *parse_data)
  * @param parse_data - A pointer to the structure for storing the texture info.
  * @return [0] Texture data is filled. [1] Error in the texture format/data.
  */
-int	process_texture_data_split_line(char **line_split, t_parse_data *parse_data)
+int	read_text_split_line(char **line_split, t_parse_data *parse_data)
 {
 	if (!ft_strncmp(line_split[0], "NO ", 2))
 		parse_data->no = ft_strdup(line_split[1]);
@@ -148,10 +148,10 @@ int	process_parsed_data_line(char *line, t_parse_data *parse_data)
 	if (!line_split[0] || !line_split[1])
 		return (ft_split_free(line_split), 0);
 	if (valid_texture_line(line))
-		if (process_texture_data_split_line(line_split, parse_data) != 0)
+		if (read_text_split_line(line_split, parse_data) != 0)
 			return (ft_split_free(line_split), 1);
 	if (valid_color_line(line))
-		if (process_color_data_split_line(line_split, parse_data) != 0)
+		if (read_color_split_line(line_split, parse_data) != 0)
 			return (ft_split_free(line_split), 1);
 	return (ft_split_free(line_split), 0);
 }

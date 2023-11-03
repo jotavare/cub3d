@@ -6,11 +6,11 @@
 /*   By: jotavare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 00:07:40 by jotavare          #+#    #+#             */
-/*   Updated: 2023/11/02 03:00:51 by jotavare         ###   ########.fr       */
+/*   Updated: 2023/11/03 01:17:27 by jotavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../include/cub3d.h"
 
 /**
  * Fills the background of the frame with ceiling and floor colors.
