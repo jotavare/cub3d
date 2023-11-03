@@ -1,4 +1,4 @@
-#include "headers/cub3d.h"
+#include "../headers/cub3d.h"
 
 int	keypress(int keycode, t_vars *vars)
 {

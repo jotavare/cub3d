@@ -1,9 +1,9 @@
+#include "../headers/cub3d.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <unistd.h>
-#include "mlx/mlx.h"
 #include <time.h>
 
 //place the example code below here:s
