@@ -6,14 +6,14 @@
 #    By: jotavare <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/02 00:45:13 by jotavare          #+#    #+#              #
-#    Updated: 2023/11/03 00:03:06 by jotavare         ###   ########.fr        #
+#    Updated: 2023/11/03 02:24:06 by jotavare         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CFLAGS		=	-Wall -Wextra -Werror -g
 CC			=	cc
 
-NAME		=	cub3d
+NAME		=	cub3D
 
 HEADERS		=	include/cub3d.h
 INCLUDE		=	-I ./include -I $(MLX_DIR) -I $(LIBFT_DIR)
