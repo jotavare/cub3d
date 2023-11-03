@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   file_format.c                                      :+:      :+:    :+:   */
+/*   file_validation.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jotavare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 00:07:33 by jotavare          #+#    #+#             */
-/*   Updated: 2023/11/02 03:55:52 by jotavare         ###   ########.fr       */
+/*   Updated: 2023/11/03 01:06:04 by jotavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../include/cub3d.h"
 
 /**
  * Trims leading and trailing spaces and newlines and checks

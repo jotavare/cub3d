@@ -6,11 +6,11 @@
 /*   By: jotavare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 01:49:01 by jotavare          #+#    #+#             */
-/*   Updated: 2023/11/02 03:10:24 by jotavare         ###   ########.fr       */
+/*   Updated: 2023/11/03 01:17:21 by jotavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../include/cub3d.h"
 
 /**
  * Renders the 3D view of the game world by calculating the

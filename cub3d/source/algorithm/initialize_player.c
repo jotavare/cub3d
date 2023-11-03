@@ -6,11 +6,11 @@
 /*   By: jotavare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 01:51:51 by jotavare          #+#    #+#             */
-/*   Updated: 2023/11/02 01:51:52 by jotavare         ###   ########.fr       */
+/*   Updated: 2023/11/03 01:17:17 by jotavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../include/cub3d.h"
 
 /**
  * Calculate the initial player angle (pa) based on the

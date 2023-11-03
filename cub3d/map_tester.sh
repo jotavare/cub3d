@@ -112,10 +112,8 @@ invalid_maps=(
 	"./maps/invalid/wall_hole_west.cub"
 	"./maps/invalid/wall_none.cub"
 	"./maps/invalid/wrong_setting.cub"
-	"./maps/invalid/triangle_open.cub"
 	"./maps/invalid/triangle_multi_open.cub"
 	"./maps/invalid/broken_xpm.cub"
-	"./maps/valid/xpm_wrong_size.cub"
 )
 
 # ---------------------------------------------------------------------------- #

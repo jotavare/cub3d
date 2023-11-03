@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_map.c                                          :+:      :+:    :+:   */
+/*   map_populate.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jotavare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 00:07:25 by jotavare          #+#    #+#             */
-/*   Updated: 2023/11/02 04:02:13 by jotavare         ###   ########.fr       */
+/*   Updated: 2023/11/03 01:16:41 by jotavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../include/cub3d.h"
 
 /**
  * Assigns values to an array representing a row in the map based
@@ -20,7 +20,7 @@
  * @param row - An array representing a row in the map.
  * @param line - The line containing characters representing the map row.
  */
-void	populate_map_row(int *row, char *line)
+void	fill_map_row(int *row, char *line)
 {
 	int	i;
 
@@ -75,7 +75,7 @@ int	read_populate_map_file(char *file, t_parse_data *parse_data)
 		if (map_started && !line_data_check(line))
 			return (free(line), close(fd), 0);
 		if (map_started)
-			populate_map_row(parse_data->map[row++], line);
+			fill_map_row(parse_data->map[row++], line);
 		free(line);
 		line = get_next_line(fd);
 	}
