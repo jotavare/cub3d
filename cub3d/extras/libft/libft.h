@@ -6,17 +6,19 @@
 /*   By: jotavare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 00:34:39 by jotavare          #+#    #+#             */
-/*   Updated: 2023/11/02 00:34:40 by jotavare         ###   ########.fr       */
+/*   Updated: 2023/11/04 18:26:03 by jotavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+// [LIBRARIES] //
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
 
+// [FUNCTIONS] //
 int		ft_atoi(const char *str);
 void	ft_bzero(void *str, size_t n);
 void	*ft_calloc(size_t count, size_t size);
