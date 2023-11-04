@@ -6,12 +6,19 @@
 /*   By: jotavare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 00:34:07 by jotavare          #+#    #+#             */
-/*   Updated: 2023/11/02 00:34:08 by jotavare         ###   ########.fr       */
+/*   Updated: 2023/11/04 18:22:55 by jotavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Splits a string into an array of substrings based on a delimiter character.
+ *
+ * @param s The input string to be split.
+ * @param c The delimiter character for splitting.
+ * @return An array of pointers to the substrings, or NULL on failure.
+ */
 void	ft_split_free(char **ptr)
 {
 	unsigned int	i;

@@ -6,12 +6,21 @@
 /*   By: jotavare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 00:34:19 by jotavare          #+#    #+#             */
-/*   Updated: 2023/11/02 00:34:20 by jotavare         ###   ########.fr       */
+/*   Updated: 2023/11/04 18:30:24 by jotavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Creates a new string by trimming characters from the beginning and
+ * end of an input string.
+ *
+ * @param s1 The input string to be trimmed.
+ * @param set A set of characters to be removed from the input string.
+ * @return A new string containing the trimmed version of the input
+ * string, or NULL on failure.
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;

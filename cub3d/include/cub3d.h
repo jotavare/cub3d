@@ -6,13 +6,14 @@
 /*   By: jotavare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 00:08:28 by jotavare          #+#    #+#             */
-/*   Updated: 2023/11/03 01:14:54 by jotavare         ###   ########.fr       */
+/*   Updated: 2023/11/04 18:10:01 by jotavare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CUB3D_H
 # define CUB3D_H
 
+// [LIBRARIES] //
 # include "../libft/libft.h"
 # include "../minilibx/mlx.h"
 # include "structs.h"
@@ -22,6 +23,7 @@
 # include <math.h>
 # include <stdio.h>
 
+// [MACROS] //
 # define WIN_W 1280
 # define WIN_H 720
 # define PI 3.14159265358979323846
