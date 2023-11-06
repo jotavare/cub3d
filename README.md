@@ -28,8 +28,10 @@ This project is inspired by the world-famous Wolfenstein 3D game, developed by I
 <a href="https://github.com/jotavare/netpractice/blob/main/subject/en_subject_cub3d.pdf">Click here</a> for the subject of this project.
 
 ## TEAM
-- [Pedro Mota](https://github.com/peterbikes) `github` [**maricard**](https://profile.intra.42.fr/users/psotto-m) `intra`
-- [Nuno Jesus](https://github.com/jotavare) `github` [**ncarvalh**](https://profile.intra.42.fr/users/jotavare) `intra`
+| GitHub | 42 Intra |
+| :--: | :--: |
+| [Pedro Mota](https://github.com/peterbikes)	| [psotto-m](https://profile.intra.42.fr/users/psotto-m) |
+| [João Oliveira](https://github.com/jotavare)	| [jotavare](https://profile.intra.42.fr/users/jotavare) |
 
 ## COMPILATION AND EXECUTION
 #### 1º - Clone the repository
@@ -38,7 +40,8 @@ git clone git@github.com:jotavare/cub3d.git
 ```
 
 #### 2º - Enter the project folder and run `make mlx`
-> **Important:** This rule is not mandatory but necessary to run the game.
+> [!NOTE]  
+> This rule is not mandatory but necessary to run the game because the minilibx library is not included.
 ```bash
 cd cub3d/cub3d
 make mlx
@@ -53,14 +56,12 @@ make re
 #### MAKEFILE RULES
 
 `make` - Compile so_long files.
-
 `make all`  - Compile mandatory files.
-
 `make clean`  - Delete all .o (object files) files.
-
 `make fclean`  - Delete all .o (object files) and .a (executable) files.
-
 `make re` - Use rules `fclean` + `all`.
+`make norm` - Uses the norminette on the libft and cub3d source files.
+`make mlx` - Downloads and compiles the minilibx library.
 
 ## MANDATORY
 #### Main
