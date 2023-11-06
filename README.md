@@ -45,23 +45,25 @@ git clone git@github.com:jotavare/cub3d.git
 ```bash
 cd cub3d/cub3d
 make mlx
-make re
 ```
 
 #### 3º - Run the game with a map of your choice
 ```bash
+make re
 ./cub3d [map.cub]
 ```
 
 #### MAKEFILE RULES
 
-`make` - Compile so_long files.
-`make all`  - Compile mandatory files.
-`make clean`  - Delete all .o (object files) files.
-`make fclean`  - Delete all .o (object files) and .a (executable) files.
-`make re` - Use rules `fclean` + `all`.
-`make norm` - Uses the norminette on the libft and cub3d source files.
-`make mlx` - Downloads and compiles the minilibx library.
+| Rules | Information |
+| :-- | :-- |
+| `make`		| Compile so_long files. 									|
+| `make all`	| Compile mandatory files.									|
+| `make clean`	| Delete all .o (object files) files.						|
+| `make fclean`	| Delete all .o (object files) and .a (executable) files.	|
+| `make re`		| Use rules `fclean` + `all`.								|
+| `make norm`	| Uses the norminette on the libft and cub3d source files.	|
+| `make mlx`	| Downloads and compiles the minilibx library.				|
 
 ## MANDATORY
 #### Main
@@ -81,22 +83,25 @@ make re
 - [x] The map must be composed of only 6 possible characters.
 
 | Characters | Description |
-| :--: | :--: |
+| :-- | :-- |
 | `0`               | Empty space.                           |
 | `1`               | Wall.                                  |
 | `N` `S` `E` `W`   | Player start position and orientation. |
 
 #### MAP PARSING
 - [x] The map must be closed/surrounded by walls, if not, the program must return an error.
-- [x] Except for the map content, each type of element can be separated by one or more empty line(s).
-- [x] Except for the map content, which always has to be the last, each type of element can be set in any order in the file.
-- [x] Except for the map, each type of information from an element can be separated by one or more space(s).
-- [x] The program must be able to parse any kind of map, as long it respects the rules.
+- [x] The program must be able to parse any kind of map, as long it respects the rules:
+	- [x] Map content always has to be the last.
+	- [x] Separated by one or more empty line(s).
+	- [x] Each type of element can be set in any order in the file.
+	- [x] Each type of information from an element can be separated by one or more space(s).
 - [x] If an error/misconfiguration is encountered, it should return `Error\n` followed by an explicit message.
-- [x] Each element (except the map) first information is the type identifier (composed by one or two character(s)), followed by all specific informations for eachobject
+
+#### .cub COMPONENTS
+- [x] Each element first information is the type identifier, followed by all specific informations for each object;
 
 | Name | Example | Identifier | Information |
-| :--: | :--: | :--: | :--: |
+| :-- | :-- | :-- | :-- |
 | North texture: | `NO ./path_to_the_north_texture` | NO | Path to the north texure.                  |
 | South texture: | `SO ./path_to_the_south_texture` | SO | Path to the south texure.                  |
 | West texture:  | `WE ./path_to_the_west_texture`  | WE | Path to the west texure.                   |
