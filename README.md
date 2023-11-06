@@ -66,39 +66,38 @@ make re
 | `make mlx`	| Downloads and compiles the minilibx library.				|
 
 ## MANDATORY
-#### Main
+#### MAIN RULES
 - [x] Must use MiniLibX library;
 - [x] The game window must remain smooth: changing to another window, minimizing, etc;
 - [x] Display different wall textures that vary depending on which side the wall is facing (North, South, East, West);
 - [x] Must be able to set the floor and ceiling colors to two different ones;
 
-#### WINDOW AND KEYS
+#### WINDOWS AND KEYS
 - [x] Displays the image in a window;
 - [x] Left and right arrow keys must allow you to look left and right in the maze.
 - [x] The `W`, `A`, `S`, and `D` keys must allow you to move the point of view through the maze.
 - [x] Pressing `ESC` or clicking on the `cross` on the window’s frame must close the window and quit the program cleanly.
 
-#### MAP COMPONENTS
+#### MAP PARSING/VALIDATION
+> [!IMPORTANT] 
+> The program must be able to parse any kind of map, as long it respects the rules:
 - [x] The program has to take as a parameter a map description file ending with the `.cub` extension.
+- [x] The map must be closed/surrounded by walls, if not, the program must return an error.
+- [x] Map content always has to be the last.
+- [x] Separated by one or more empty line(s).
+- [x] Each type of element can be set in any order in the file.
+- [x] Each type of information from an element can be separated by one or more space(s).
+- [x] If an error/misconfiguration is encountered, it should return `Error\n` followed by an explicit message.
+
+#### .cub COMPONENTS
 - [x] The map must be composed of only 6 possible characters.
+- [x] Each element first information is the type identifier, followed by all specific informations for each object;
 
 | Characters | Description |
 | :-- | :-- |
 | `0`               | Empty space.                           |
 | `1`               | Wall.                                  |
 | `N` `S` `E` `W`   | Player start position and orientation. |
-
-#### MAP PARSING
-- [x] The map must be closed/surrounded by walls, if not, the program must return an error.
-- [x] The program must be able to parse any kind of map, as long it respects the rules:
-	- [x] Map content always has to be the last.
-	- [x] Separated by one or more empty line(s).
-	- [x] Each type of element can be set in any order in the file.
-	- [x] Each type of information from an element can be separated by one or more space(s).
-- [x] If an error/misconfiguration is encountered, it should return `Error\n` followed by an explicit message.
-
-#### .cub COMPONENTS
-- [x] Each element first information is the type identifier, followed by all specific informations for each object;
 
 | Name | Example | Identifier | Information |
 | :-- | :-- | :-- | :-- |
