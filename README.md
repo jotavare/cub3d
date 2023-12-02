@@ -77,7 +77,7 @@ make re
 - [x] Pressing `ESC` or clicking on the `cross` on the window’s frame must close the window and quit the program cleanly.
 
 #### MAP PARSING/VALIDATION
-> [!IMPORTANT] 
+> [!NOTE] 
 > The program must be able to parse any kind of map, as long it respects the rules:
 - [x] The program has to take as a parameter a map description file ending with the `.cub` extension.
 - [x] The map must be closed/surrounded by walls, if not, the program must return an error.
@@ -106,7 +106,7 @@ make re
 | Floor colour:   | `F 220,100,0`                    | F  | R,G,B colours in range [0,255]: 0, 255, 255 |
 | Ceiling colour: | `C 225,30,0`                     | C  | R,G,B colours in range [0,255]: 0, 255, 255 |
 
-Example of a valid `.cub` map:
+> Example of a valid `.cub` map:
 ```bash
 NO ./path_to_the_north_texture
 SO ./path_to_the_south_texture
