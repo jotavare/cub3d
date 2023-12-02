@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/jotavare/jotavare/blob/main/42/banner/new/42_cub3d_banner_new.png">
+  <img src="https://github.com/jotavare/jotavare/blob/main/42/banners/piscine_and_common_core/github_piscine_and_common_core_banner_cub3d.png">
 </p>
 
 <p align="center">
@@ -19,9 +19,9 @@
 </p>
 
 ## ABOUT
-Cub3D is a graphics programming project where I dived into raycasting to create a 3D game in C using the minilibx library. I learned about raycasting, basic algorithms, rendering 3D environments, textures, windows, colors, events, shape filling, wall collision, map parsing, mini-map, ...
+Cub3D is a graphics programming project where I dived into raycasting to create a 3D game in C using the minilibx library. I learned about raycasting, basic algorithms, rendering 3D environments, textures, windows, colours, events, shape filling, wall collision, map parsing, mini-map, ...
 
-This project is inspired by the world-famous Wolfenstein 3D game, developed by Id Software by the über famous John Carmack and John Romero, published in 1992 by Apogee Software, Wolfenstein 3D is the first true “First Person Shooter” in the history of video games.
+This project is inspired by the world-famous Wolfenstein 3D game, developed by Id Software by the famous John Carmack and John Romero, and published in 1992 by Apogee Software, Wolfenstein 3D is the first true “First Person Shooter” in the history of video games.
 
 <a href="http://users.atw.hu/wolf3d/">Play the original game.</a>
 
@@ -70,7 +70,7 @@ make re
 - [x] Must use MiniLibX library;
 - [x] The game window must remain smooth: changing to another window, minimizing, etc;
 - [x] Display different wall textures that vary depending on which side the wall is facing (North, South, East, West);
-- [x] Must be able to set the floor and ceiling colors to two different ones;
+- [x] Must be able to set the floor and ceiling colours to two different ones;
 
 #### WINDOWS AND KEYS
 - [x] Displays the image in a window;
@@ -91,7 +91,7 @@ make re
 
 #### .cub COMPONENTS
 - [x] The map must be composed of only 6 possible characters.
-- [x] Each element first information is the type identifier, followed by all specific informations for each object;
+- [x] Each element's first information is the type identifier, followed by all specific information for each object;
 
 | Characters | Description |
 | :-- | :-- |
@@ -101,12 +101,12 @@ make re
 
 | Name | Example | Identifier | Information |
 | :-- | :-- | :-- | :-- |
-| North texture: | `NO ./path_to_the_north_texture` | NO | Path to the north texure.                  |
-| South texture: | `SO ./path_to_the_south_texture` | SO | Path to the south texure.                  |
-| West texture:  | `WE ./path_to_the_west_texture`  | WE | Path to the west texure.                   |
-| East texture:  | `EA ./path_to_the_east_texture`  | EA | Path to the east texure.                   |
-| Floor color:   | `F 220,100,0`                    | F  | R,G,B colors in range [0,255]: 0, 255, 255 |
-| Ceiling color: | `C 225,30,0`                     | C  | R,G,B colors in range [0,255]: 0, 255, 255 |
+| North texture:  | `NO ./path_to_the_north_texture` | NO | Path to the north texure.                   |
+| South texture:  | `SO ./path_to_the_south_texture` | SO | Path to the south texure.                   |
+| West texture:   | `WE ./path_to_the_west_texture`  | WE | Path to the west texure.                    |
+| East texture:   | `EA ./path_to_the_east_texture`  | EA | Path to the east texure.                    |
+| Floor colour:   | `F 220,100,0`                    | F  | R,G,B colours in range [0,255]: 0, 255, 255 |
+| Ceiling colour: | `C 225,30,0`                     | C  | R,G,B colours in range [0,255]: 0, 255, 255 |
 
 Example of a valid `.cub` map:
 ```bash
@@ -138,23 +138,23 @@ C 225,30,0
 - [x] Wall collisions.
 - [x] A minimap system.
 - [ ] Doors which can open and close.
-- [ ] Animated sprite.
-- [ ] Rotate the point view with the mouse.
+- [ ] Animated Sprite.
+- [ ] Rotate the point of view with the mouse.
 
 ## NORMINETTE
-At 42 School, it is expected that almost every project is written in accordance with the Norm, which is the coding standard of the school.
+At 42 School, it is expected that almost every project is written following the Norm, which is the coding standard of the school.
 
 ```
-- No for, do...while, switch, case, goto, ternary operators and variable-length arrays are allowed
-- Each function must be a maximum of 25 lines, not counting the function's curly brackets
-- Each line must be at most 80 columns wide, comments included
-- A function can take 4 named parameters maximum
-- No assigns and declarations in the same line (unless static)
-- You can't declare more than 5 variables per function
+- No for, do...while, switch, case, goto, ternary operators and variable-length arrays are allowed;
+- Each function must be a maximum of 25 lines, not counting the function's curly brackets;
+- Each line must be at most 80 columns wide, with comments included;
+- A function can take 4 named parameters maximum;
+- No assigns and declarations in the same line (unless static);
+- You can't declare more than 5 variables per function;
 - ...
 ```
 
-* [42 Norms](https://github.com/jotavare/jotavare/blob/main/42/pdf/en_norm.pdf) - Information about 42 code norms. `PDF`
+* [42 Norms](https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf) - Information about 42 code norms. `PDF`
 * [Norminette](https://github.com/42School/norminette) - Tool by 42, to respect the code norm. `GitHub`
 * [42 Header](https://github.com/42Paris/42header) - 42 header for Vim. `GitHub`
 
