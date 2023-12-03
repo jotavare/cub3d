@@ -15,25 +15,24 @@
 <p align="center">
 	<a href="#about">About</a> •
 	<a href="#how-to-use">How to use</a> •
+	<a href="#mandatory">Mandatory</a> •
+	<a href="#bonus">Bonus</a> •
+  	<a href="#team">Team</a> •
+     	<a href="#norminette">Norminette</a> •
 	<a href="#license">License</a>
 </p>
 
 ## ABOUT
-Cub3D is a graphics programming project where I dived into raycasting to create a 3D game in C using the minilibx library. I learned about raycasting, basic algorithms, rendering 3D environments, textures, windows, colours, events, shape filling, wall collision, map parsing, mini-map, ...
+This is a graphics programming project where I created a 3D game in C, using the minilibx library. I learned about raycasting, basic algorithms, rendering 3D environments, textures, windows, colours, events, shape filling, wall collision, map parsing, mini-map, ...
 
-This project is inspired by the world-famous Wolfenstein 3D game, developed by Id Software by the famous John Carmack and John Romero, and published in 1992 by Apogee Software, Wolfenstein 3D is the first true “First Person Shooter” in the history of video games.
+This project is inspired by the world-famous Wolfenstein 3D game, by the famous John Carmack and John Romero (Id Software), and published in 1992 by Apogee Software, Wolfenstein 3D is the first true “First Person Shooter” in the history of video games.
 
-<a href="http://users.atw.hu/wolf3d/">Play the original game.</a>
+A replica of the original game is available to play online <a href="http://users.atw.hu/wolf3d/">here</a>.
 
-<a href="https://github.com/jotavare/netpractice/blob/main/subject/en_subject_cub3d.pdf">Click here</a> for the subject of this project.
+- [Subject](https://github.com/jotavare/netpractice/blob/main/subject/en_subject_cub3d.pdf) `PDF`
+- [References](https://github.com/jotavare/42-resources#04-cub3d) `GitHub`
 
-## TEAM
-| GitHub | 42 Intra |
-| :--: | :--: |
-| [Pedro Mota](https://github.com/peterbikes)	| [psotto-m](https://profile.intra.42.fr/users/psotto-m) |
-| [João Oliveira](https://github.com/jotavare)	| [jotavare](https://profile.intra.42.fr/users/jotavare) |
-
-## COMPILATION AND EXECUTION
+## HOW TO USE
 #### 1º - Clone the repository
 ```bash
 git clone git@github.com:jotavare/cub3d.git
@@ -79,7 +78,7 @@ make re
 - [x] Pressing `ESC` or clicking on the `cross` on the window’s frame must close the window and quit the program cleanly.
 
 #### MAP PARSING/VALIDATION
-> [!IMPORTANT] 
+> [!NOTE] 
 > The program must be able to parse any kind of map, as long it respects the rules:
 - [x] The program has to take as a parameter a map description file ending with the `.cub` extension.
 - [x] The map must be closed/surrounded by walls, if not, the program must return an error.
@@ -108,7 +107,7 @@ make re
 | Floor colour:   | `F 220,100,0`                    | F  | R,G,B colours in range [0,255]: 0, 255, 255 |
 | Ceiling colour: | `C 225,30,0`                     | C  | R,G,B colours in range [0,255]: 0, 255, 255 |
 
-Example of a valid `.cub` map:
+> Example of a valid `.cub` map:
 ```bash
 NO ./path_to_the_north_texture
 SO ./path_to_the_south_texture
@@ -140,6 +139,12 @@ C 225,30,0
 - [ ] Doors which can open and close.
 - [ ] Animated Sprite.
 - [ ] Rotate the point of view with the mouse.
+
+## TEAM
+| GitHub | 42 Intra |
+| :--: | :--: |
+| [Pedro Mota](https://github.com/peterbikes)	| [psotto-m](https://profile.intra.42.fr/users/psotto-m) |
+| [João Oliveira](https://github.com/jotavare)	| [jotavare](https://profile.intra.42.fr/users/jotavare) |
 
 ## NORMINETTE
 > At 42 School, it is expected that almost every project is written following the Norm, which is the coding standard of the school.
