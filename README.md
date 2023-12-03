@@ -27,7 +27,7 @@ This is a graphics programming project where I created a 3D game in C, using the
 
 This project is inspired by the world-famous Wolfenstein 3D game, by the famous John Carmack and John Romero (Id Software), and published in 1992 by Apogee Software, Wolfenstein 3D is the first true “First Person Shooter” in the history of video games.
 
-<a href="http://users.atw.hu/wolf3d/">Play the original game.</a>
+A replica of the original game is available to play online <a href="http://users.atw.hu/wolf3d/">here</a>.
 
 - [Subject](https://github.com/jotavare/netpractice/blob/main/subject/en_subject_cub3d.pdf) `PDF`
 - [References](https://github.com/jotavare/42-resources#04-cub3d) `GitHub`
