@@ -29,7 +29,8 @@ This project is inspired by the world-famous Wolfenstein 3D game, by the famous 
 
 <a href="http://users.atw.hu/wolf3d/">Play the original game.</a>
 
-<a href="https://github.com/jotavare/netpractice/blob/main/subject/en_subject_cub3d.pdf">Click here</a> for the subject of this project.
+- [Subject](https://github.com/jotavare/netpractice/blob/main/subject/en_subject_cub3d.pdf) `PDF`
+- [References](https://github.com/jotavare/42-resources#04-cub3d) `GitHub`
 
 ## HOW TO USE
 #### 1º - Clone the repository
