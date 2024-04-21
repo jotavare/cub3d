@@ -134,9 +134,9 @@ C 225,30,0
 ## BONUS
 - [x] Wall collisions.
 - [x] A minimap system.
-- [ ] Doors which can open and close.
-- [ ] Animated Sprite.
-- [ ] Rotate the point of view with the mouse.
+- [x] Doors which can open and close.
+- [x] Animated Sprite.
+- [x] Rotate the point of view with the mouse.
 
 ## TEAM
 | GitHub | 42 Intra |
