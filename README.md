@@ -35,7 +35,7 @@ git clone git@github.com:jotavare/cub3d.git
 ```
 
 #### 2º - Enter the project folder and run `make mlx`
-> [!NOTE]  
+> [!NOTE]
 > This rule is not mandatory but necessary to run the game because the minilibx library is not included.
 ```bash
 cd cub3d/cub3d
@@ -74,7 +74,7 @@ make re
 - [x] Pressing `ESC` or clicking on the `cross` on the window’s frame must close the window and quit the program cleanly.
 
 #### MAP PARSING/VALIDATION
-> [!NOTE] 
+> [!NOTE]
 > The program must be able to parse any kind of map, as long it respects the rules:
 - [x] The program has to take as a parameter a map description file ending with the `.cub` extension.
 - [x] The map must be closed/surrounded by walls, if not, the program must return an error.
