@@ -3,10 +3,10 @@
 </p>
 
 <p align="center">
-	<img src="https://img.shields.io/badge/status-in%20progress-yellow?style=flat-square"/>
+	<img src="https://img.shields.io/badge/status-finished-success?color=%2312bab9&style=flat-square"/>
 	<img src="https://img.shields.io/github/languages/top/jotavare/cub3d?color=%2312bab9&style=flat-square"/>
 	<img src="https://img.shields.io/github/last-commit/jotavare/cub3d?color=%2312bab9&style=flat-square"/>
-	<a href='https://www.linkedin.com/in/joaoptoliveira' target="_blank"><img alt='Linkedin' src='https://img.shields.io/badge/LinkedIn-100000?style=flat-square&logo=Linkedin&logoColor=white&labelColor=0A66C2&color=0A66C2'/></a>
+	<a href='https://www.linkedin.com/in/jotavare' target="_blank"><img alt='Linkedin' src='https://img.shields.io/badge/LinkedIn-blue?style=flat-square'/></a>
 	<a href='https://profile.intra.42.fr/users/jotavare' target="_blank"><img alt='42' src='https://img.shields.io/badge/Porto-100000?style=flat-square&logo=42&logoColor=white&labelColor=000000&color=000000'/></a>
 </p>
 
@@ -28,9 +28,6 @@ This project is inspired by the world-famous Wolfenstein 3D game, by the famous 
 
 A replica of the original game is available to play online <a href="http://users.atw.hu/wolf3d/">here</a>.
 
-- [Subject](https://github.com/jotavare/netpractice/blob/main/subject/en_subject_cub3d.pdf) `PDF`
-- [References](https://github.com/jotavare/42-resources#04-cub3d) `GitHub`
-
 ## HOW TO USE
 #### 1º - Clone the repository
 ```bash
@@ -38,7 +35,7 @@ git clone git@github.com:jotavare/cub3d.git
 ```
 
 #### 2º - Enter the project folder and run `make mlx`
-> [!NOTE]  
+> [!NOTE]
 > This rule is not mandatory but necessary to run the game because the minilibx library is not included.
 ```bash
 cd cub3d/cub3d
@@ -77,7 +74,7 @@ make re
 - [x] Pressing `ESC` or clicking on the `cross` on the window’s frame must close the window and quit the program cleanly.
 
 #### MAP PARSING/VALIDATION
-> [!NOTE] 
+> [!NOTE]
 > The program must be able to parse any kind of map, as long it respects the rules:
 - [x] The program has to take as a parameter a map description file ending with the `.cub` extension.
 - [x] The map must be closed/surrounded by walls, if not, the program must return an error.
