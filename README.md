@@ -28,9 +28,6 @@ This project is inspired by the world-famous Wolfenstein 3D game, by the famous 
 
 A replica of the original game is available to play online <a href="http://users.atw.hu/wolf3d/">here</a>.
 
-- [Subject](https://github.com/jotavare/netpractice/blob/main/subject/en_subject_cub3d.pdf) `PDF`
-- [References](https://github.com/jotavare/42-resources#04-cub3d) `GitHub`
-
 ## HOW TO USE
 #### 1º - Clone the repository
 ```bash
