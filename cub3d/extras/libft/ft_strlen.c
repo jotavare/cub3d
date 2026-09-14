@@ -16,7 +16,7 @@
  * Calculates the length of a null-terminated string.
  *
  * @param str The input string to determine the length of.
- * @return The number of characters in the string, excluding the null-terminator.
+ * @return The number of characters, excluding the null-terminator.
  */
 size_t	ft_strlen(const char *str)
 {
