@@ -1,3 +1,25 @@
-*.out
-*.pdf
+# Build output.
+*.o
+*.a
+cub3d/cub3D
+
+# minilibx is cloned in by `make mlx`, not vendored here.
+cub3d/extras/minilibx/
+
+# Editor and OS droppings.
+.vscode/
+.idea/
 *.swp
+*~
+.DS_Store
+._*
+Thumbs.db
+
+# Never commit credentials.
+.env
+.env.*
+*.pem
+*.key
+
+*.pdf
+*.out

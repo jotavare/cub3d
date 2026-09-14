@@ -15,8 +15,7 @@
 	<a href="#how-to-use">How to use</a> •
 	<a href="#mandatory">Mandatory</a> •
 	<a href="#bonus">Bonus</a> •
-  	<a href="#team">Team</a> •
-     	<a href="#norminette">Norminette</a> •
+       	<a href="#norminette">Norminette</a> •
 	<a href="#contributing">Contributing</a> •
 	<a href="#license">License</a>
 </p>
@@ -27,6 +26,9 @@ This is a graphics programming project where I created a 3D game in C, using the
 This project is inspired by the world-famous Wolfenstein 3D game, by the famous John Carmack and John Romero (Id Software), and published in 1992 by Apogee Software, Wolfenstein 3D is the first true “First Person Shooter” in the history of video games.
 
 A replica of the original game is available to play online <a href="http://users.atw.hu/wolf3d/">here</a>.
+
+> [!NOTE]
+> For the rest of the projects and exams in the cursus, <a href="https://github.com/jotavare/42-common-core">click here</a>.
 
 ## HOW TO USE
 #### 1º - Clone the repository
@@ -45,7 +47,7 @@ make mlx
 #### 3º - Run the game with a map of your choice
 ```bash
 make re
-./cub3d [map.cub]
+./cub3D [map.cub]
 ```
 
 #### MAKEFILE RULES
@@ -136,12 +138,6 @@ C 225,30,0
 - [x] Animated Sprite.
 - [x] Rotate the point of view with the mouse.
 
-## TEAM
-| GitHub | 42 Intra |
-| :--: | :--: |
-| [Pedro Mota](https://github.com/peterbikes)	| [psotto-m](https://profile.intra.42.fr/users/psotto-m) |
-| [João Oliveira](https://github.com/jotavare)	| [jotavare](https://profile.intra.42.fr/users/jotavare) |
-
 ## NORMINETTE
 > At 42 School, it is expected that almost every project is written following the Norm, which is the coding standard of the school.
 
@@ -161,8 +157,9 @@ C 225,30,0
 
 ## CONTRIBUTING
 
-If you find any issues or have suggestions for improvements, feel free to fork the repository and open an issue or submit a pull request.
+This repository documents work already submitted and graded, so it is not open
+to changes. Feel free to fork it if any of it is useful to you.
 
 ## LICENSE
 
-This project is available under the MIT License. For further details, please refer to the [LICENSE](https://github.com/jotavare/cub3d/blob/master/LICENSE) file.
+This project is available under the MIT License. For further details, please refer to the [LICENSE](https://github.com/jotavare/cub3d/blob/main/LICENSE) file.

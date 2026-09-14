@@ -1,0 +1,6 @@
+# Keep everything in the repository as LF, whatever the checkout platform.
+* text=auto eol=lf
+
+# Textures are XPM, C source in form but must not be reflowed.
+*.xpm -text
+*.png binary
