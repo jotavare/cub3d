@@ -157,8 +157,7 @@ C 225,30,0
 
 ## CONTRIBUTING
 
-This repository documents work already submitted and graded, so it is not open
-to changes. Feel free to fork it if any of it is useful to you.
+This repository is finished and not open to changes.
 
 ## LICENSE
 
