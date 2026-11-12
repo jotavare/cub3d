@@ -85,10 +85,10 @@ make re
 
 | Name | Example | Identifier | Information |
 | :-- | :-- | :-- | :-- |
-| North texture:  | `NO ./path_to_the_north_texture` | NO | Path to the north texure.                   |
-| South texture:  | `SO ./path_to_the_south_texture` | SO | Path to the south texure.                   |
-| West texture:   | `WE ./path_to_the_west_texture`  | WE | Path to the west texure.                    |
-| East texture:   | `EA ./path_to_the_east_texture`  | EA | Path to the east texure.                    |
+| North texture:  | `NO ./path_to_the_north_texture` | NO | Path to the north texture.                   |
+| South texture:  | `SO ./path_to_the_south_texture` | SO | Path to the south texture.                   |
+| West texture:   | `WE ./path_to_the_west_texture`  | WE | Path to the west texture.                    |
+| East texture:   | `EA ./path_to_the_east_texture`  | EA | Path to the east texture.                    |
 | Floor colour:   | `F 220,100,0`                    | F  | R,G,B colours in range [0,255]: 0, 255, 255 |
 | Ceiling colour: | `C 225,30,0`                     | C  | R,G,B colours in range [0,255]: 0, 255, 255 |
 
